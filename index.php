@@ -4,8 +4,8 @@
 	
 	//aggiungere header access control allow origin per permettere a client presenti in altri domini di fare le richieste
 	header("Access-Control-Allow-Origin: *");
-	
-	$ID=3;
+	header('Access-Control-Allow-Methods: GET, POST, DELETE, PUT');
+	$ID=1;
 	
 	//prelevo la uri dalla query string
 	if(!empty($_GET["url"]))$url=explode("/",$_GET["url"]);

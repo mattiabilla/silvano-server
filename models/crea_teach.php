@@ -1,7 +1,7 @@
  <?php
 	//controllo che siano presenti tutti i campi necessari
 	
-	if(!empty($_POST["nome"])&& !empty($_POST["materia"])&& !empty($_POST["anno"])){
+	if(!empty($_POST["nome"])&& !empty($_POST["materia"])&& !empty($_POST["anno"])&& !empty($_POST["colore"])){
 		//connetto il database
 		require_once($_SERVER['DOCUMENT_ROOT']."/db.php");
 		
@@ -9,8 +9,9 @@
 		$nome=$_POST["nome"];
 		$materia=$_POST["materia"];
 		$anno=$_POST["anno"];
+		$colore=$_POST["colore"];
 		
-		$sql="insert into classi(nome,materia,anno,fk_ins,aperta) values ('$nome','$materia',$anno,$ID,1);";
+		$sql="insert into classi(nome,materia,anno,fk_ins,aperta,colore) values ('$nome','$materia',$anno,$ID,1,'$colore');";
 		
 		$result = $db->query($sql);
 		
