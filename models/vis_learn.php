@@ -5,7 +5,7 @@
 		require_once($_SERVER['DOCUMENT_ROOT']."/db.php");
 		
 		//costruisco la query string, QUESTA PARTE E' DA MODIFICARE, INSICURA!!!
-		$sql="select classi.id,nome,materia,anno,fk_ins,aperta from classi,utenticlassi where fk_utente=".$ID." and fk_classe = classi.id ";
+		$sql="select classi.id,nome,materia,anno,fk_ins,aperta,colore from classi,utenticlassi where fk_utente=".$ID." and fk_classe = classi.id ";
 		
 		$result = $db->query($sql);
 		
